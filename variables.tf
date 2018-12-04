@@ -12,6 +12,12 @@ variable "cluster_version" {
   default     = "1.10"
 }
 
+variable "bin_path" {
+  type        = "string"
+  description = "Path to binaries (kubectl, aws-iam-authenticator, etc)"
+  default     = "./"
+}
+
 variable "config_output_path" {
   description = "Where to save the Kubectl config file (if `write_kubeconfig = true`). Should end in a forward slash `/` ."
   default     = "./"
